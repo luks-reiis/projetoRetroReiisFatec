@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #E26539;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 90%;
+    background-color: #51ABB2;
+    border-radius: 12px;
+    box-shadow: 4px 3px 15px rgb(88, 88, 88) ;
+}

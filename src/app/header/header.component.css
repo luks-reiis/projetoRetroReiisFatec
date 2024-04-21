@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+.header{
+    margin-bottom: 20px;
+}
+
+.containerHeader{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.logo{
+    width: 150px;
+}
+
+.user{
+    width: 75px;
+    height: 75px;
+}
+
+.cjBuscar{
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 3px 15px rgb(88, 88, 88);
+    border-radius: 12px;
+}
+
+.cjBuscar > input{
+    height: 30px;
+    width: 600px;
+    font-size: 30px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    border-radius: 12px 0px 0px 12px;
+    padding: 10px;
+    color: rgb(78, 78, 78);
+}
+
+.cjBuscar > button{
+    border: none;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    padding: 10px;
+    border-radius: 0px 12px 12px 0px;
+    cursor: pointer;
+}
+
+.cjBuscar > button:hover{
+    background-color: #e07e5b;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    gap: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+a:active{
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
