@@ -1,15 +1,17 @@
 <app-header></app-header>
 <div class="containerCards">
-    <div class="card">
+    <div *ngFor="let item of listaProdutos" class="card">
         <div class="containerImagem">
-            <img src="../../assets/imagens/n64.png" alt="">
+            <img src="../../assets/imagens/{{item.imagem}}" alt="">
         </div>
         <div class="infoComprar">
             <div class="info">
-                <p>Nintendo 64</p>
-                <p>R$300,00</p>
+                <p>{{item.nome}}</p>
             </div>
-            <button>Comprar</button>
+            <div class="botao-valor">
+                <p>R${{item.valor}}</p>
+                <button *ngIf="item.estoque>0">Comprar</button>
+            </div>
         </div>
     </div>
 </div>

@@ -7,16 +7,20 @@
 .containerHeader{
     display: flex;
     align-items: center;
-    gap: 10%;
+    justify-content: center;
+    margin-left: -30px;
+    gap: 6%;
 }
 
 .logo{
-    width: 150px;
+    width: 200px;
+    cursor: pointer;
 }
 
 .user{
-    width: 75px;
-    height: 75px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
 }
 
 .cjBuscar{
