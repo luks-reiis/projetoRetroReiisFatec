@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="containerDetalheProduto">
+    <div class="containerInfoImagemBtn">
+        <div class="containerInfoImagem">
+            <div class="containerImagem">
+                <img src="../../assets/imagens/{{produtoEscolhido.imagem}}" alt="">
+            </div>
+            <div class="informacoesProduto">
+                <p class="nomeProduto">
+                    <span>Nome do produto: </span>{{produtoEscolhido.nome}}
+                </p>
+                <p class="descriscaoProduto">
+                    <span>Descrição: </span>{{produtoEscolhido.descritivo}}
+                </p>
+                <p class="valorProduto">
+                    <span>Preço: </span>R$ {{produtoEscolhido.valor}}
+                </p>
+            </div>
+        </div>
+        <div class="containerBtnDetalhe"><button>Comprar</button></div>
+    </div>
+</div>

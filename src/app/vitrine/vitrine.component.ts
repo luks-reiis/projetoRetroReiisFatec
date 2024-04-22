@@ -93,4 +93,9 @@ export class VitrineComponent {
       estoque: 1
     }
   ]
+
+  public entrarDetalhe(produto: Produto){
+    localStorage.setItem("produtoEscolhido", JSON.stringify(produto));
+    window.location.href="/detalhe";
+  }
 }
