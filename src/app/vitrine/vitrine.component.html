@@ -1,6 +1,7 @@
 <app-header></app-header>
+<h3 *ngIf="achouProduto==1" class="infoPesqProd"><span>Pesquisa por: {{produtoAchado}}</span></h3>
 <div class="containerCards">
-    <div *ngFor="let item of listaProdutos" class="card">
+    <div *ngFor="let item of produtosFiltrados" class="card">
         <div class="containerImagem" (click)="entrarDetalhe(item)">
             <img src="../../assets/imagens/{{item.imagem}}" alt="">
         </div>

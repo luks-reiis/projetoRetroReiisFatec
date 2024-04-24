@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { Produto } from '../model/produto';
 import { CommonModule } from '@angular/common';
@@ -93,6 +93,39 @@ export class VitrineComponent {
       estoque: 1
     }
   ]
+
+  public produtoAchado: string = "";
+  public achouProduto: number = 0;
+
+  @ViewChild(HeaderComponent) headerComponent: HeaderComponent | undefined;
+
+  public produtosFiltrados: Produto[] = [];
+
+  constructor(){
+    this.produtosFiltrados = this.listaProdutos;
+  }
+
+  ngAfterViewInit() {
+    if (this.headerComponent) { 
+      this.headerComponent.buscarProduto.subscribe(textoBusca => {
+        this.buscar(textoBusca);
+      });
+    }
+  }
+
+  public buscar(textoBusca: string){
+    console.log("Texto de busca recebido:", textoBusca);
+    if(!textoBusca.trim()){
+      this.produtosFiltrados = this.listaProdutos;
+      this.achouProduto = 0;
+    }else{
+      this.produtosFiltrados = this.listaProdutos.filter(produto =>
+        produto.nome.toLowerCase().includes(textoBusca.toLowerCase())
+      );
+      this.produtoAchado = textoBusca;
+      this.achouProduto = 1;
+    }
+  }
 
   public entrarDetalhe(produto: Produto){
     localStorage.setItem("produtoEscolhido", JSON.stringify(produto));
