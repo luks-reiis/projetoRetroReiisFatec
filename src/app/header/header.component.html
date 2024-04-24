@@ -5,7 +5,10 @@
             <input #entradaBusca type="text" (input)="emitirInputVazio(entradaBusca.value)">
             <button (click)="emitirBusca(entradaBusca.value)">Buscar</button>
         </div>
-        <img src="../../assets/icons/userOrange.png" alt="userIcon" class="user">
+        <div class="blocoPerfil">
+            <a href="/login"><img src="../../assets/icons/userOrange.png" alt="userIcon" class="user"></a>
+            <p>{{nomeCliente}}</p>
+        </div>
     </div>
     <nav>
         <a href="">Consoles</a>

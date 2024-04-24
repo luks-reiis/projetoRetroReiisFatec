@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="containerLogin">
+    <div class="loginFull">
+        <div class="areaLogin">
+            <h3>Já tenho cadastro</h3>
+            <h4>{{mensagem}}</h4>
+            <div class="areaInputs">
+                <div>
+                    <label for="">E-mail: </label>
+                    <input type="email" placeholder="Digite seu e-mail" [(ngModel)]="cliente.email">
+                </div>
+                <div>
+                    <label for="senha">Senha: </label>
+                    <input type="password" placeholder="Digite sua senha" [(ngModel)]="cliente.senha">
+                </div>
+            </div>
+            <div class="containerBotao">
+                <button (click)="entrar()">Entrar</button>
+            </div>
+            <a href="/login">Esqueci minha senha</a>
+        </div>
+        <div class="areaCadastro">
+            <h3>Ainda não tenho cadastro</h3>
+            <div class="containerBotao" (click)="redCadastro()"><button>Clique Aqui</button></div>
+        </div>
+    </div>
+</div>
