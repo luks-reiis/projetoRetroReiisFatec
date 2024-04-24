@@ -11,7 +11,7 @@
             </div>
             <div class="botao-valor">
                 <p>R${{item.valor}}</p>
-                <button *ngIf="item.estoque>0">Comprar</button>
+                <button *ngIf="item.estoque>0" (click)="comprar(item)">Comprar</button>
             </div>
         </div>
     </div>

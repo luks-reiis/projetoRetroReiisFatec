@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="cestaContainer">
+    <div class="cestaFull">
+        <h3>Cesta de Compras</h3>
+        <div class="containerTabela">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Qtd</th>
+                        <th>Valor Unitário</th>
+                        <th>Valor Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of lista" >
+                        <td>{{item.nomeProduto}}</td>
+                        <td>{{item.qtd}}</td>
+                        <td>R$ {{item.valor}}</td>
+                        <td>R$ {{item.total}}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Total:</th>
+                        <th >R$ {{totalCesta}}</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="botoesCesta">
+            <button (click)="limpar()">Limpar Cesta</button>
+            <button>Finalizar Compra</button>
+        </div>
+    </div>
+</div>
